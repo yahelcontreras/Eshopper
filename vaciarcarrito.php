@@ -1,8 +1,11 @@
 <?php
-//Aqui se borra el carrito de compras
-Kill ("Carritocompras.txt");
-
-echo "<Center><H2>EL Carrito de compras se ha vaciado</H2></Center>;"
-echo "<BR><BR><A> HREF= Javascript:Window.Close(); >cerrar</A>";
-echo "</Center>;"
-?>
+   //Aqui se borra el Carrito de Compras
+   if(file_exists('carritodecompras.txt')) unlink("carritodecompras.txt");
+      echo "<CENTER><H2>EL Carrito de Compras se ha Vaciado</H2>";
+      echo "</CENTER>";
+      echo "<BR>";
+   ?>
+   <script>window.opener.location.reload;</script>
+   <center>
+   <a href="javascript:window.close();">Volver a la página anterior</a>
+   </center>
